@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUXE DRIVE | Showroom Mobil Premium</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div id="loading-screen">
+        <div class="loader">
+            <h2>LUXE DRIVE</h2>
+            <div class="bar"></div>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">LUXE<span>DRIVE</span></a>
+            <ul class="nav-links">
+                <li><a href="#beranda" class="active">Beranda</a></li>
+                <li><a href="#katalog">Katalog Mobil</a></li>
+                <li><a href="#tentang">Tentang Kami</a></li>
+                <li><a href="#testimoni">Testimoni</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <button id="dark-mode-toggle"><i class="fas fa-moon"></i></button>
+                <div class="hamburger">
+                    <span class="bar-menu"></span>
+                    <span class="bar-menu"></span>
+                    <span class="bar-menu"></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="beranda" class="hero-section">
+        <div class="hero-slider">
+            <div class="slide active" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&q=80&w=1920');"></div>
+            <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&q=80&w=1920');"></div>
+            <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&q=80&w=1920');"></div>
+        </div>
+        <div class="hero-content">
+            <h1>Temukan Mobil Impian Anda</h1>
+            <p>Sajian koleksi kendaraan premium dengan kualitas terbaik dan pelayanan eksklusif kelas dunia.</p>
+            <div class="hero-btns">
+                <a href="#katalog" class="btn btn-primary">Lihat Katalog</a>
+                <a href="#kontak" class="btn btn-outline">Hubungi Kami</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats-section">
+        <div class="stats-container">
+            <div class="stat-box">
+                <h3 class="counter" data-target="150">0</h3>
+                <p>Mobil Terjual / Bulan</p>
+            </div>
+            <div class="stat-box">
+                <h3 class="counter" data-target="50">0</h3>
+                <p>Koleksi Mobil Premium</p>
+            </div>
+            <div class="stat-box">
+                <h3 class="counter" data-target="12">0</h3>
+                <p>Penghargaan Nasional</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="katalog" class="catalog-section">
+        <div class="container">
+            <h2 class="section-title">Katalog Kendaraan Premium</h2>
+            
+            <div class="filter-panel">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="search-input" placeholder="Cari mobil berdasarkan nama...">
+                </div>
+                <div class="filter-options">
+                    <select id="filter-merek">
+                        <option value="">Semua Jenis</option>
+                        <option value="Sport">Sport</option>
+                        <option value="Sedan">Sedan</option>
+                        <option value="SUV">SUV</option>
+                        <option value="Elektrik">Elektrik</option>
+                    </select>
+                    <select id="filter-tahun">
+                        <option value="">Semua Tahun</option>
+                        <option value="2025">2025</option>
+                        <option value="2024">2024</option>
+                        <option value="2023">2023</option>
+                        <option value="2022">2022</option>
+                    </select>
+                    <select id="filter-harga">
+                        <option value="">Semua Harga</option>
+                        <option value="1bawah">Di bawah 1.5 Milyar</option>
+                        <option value="1keatas">1.5 Milyar - 3 Milyar</option>
+                        <option value="3keatas">Di atas 3 Milyar</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="car-grid" id="car-grid">
+                </div>
+        </div>
+    </section>
+
+    <div id="car-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body" id="modal-body">
+                </div>
+        </div>
+    </div>
+
+    <section id="tentang" class="about-section">
+        <div class="about-container">
+            <div class="about-img">
+                <img src="https://images.unsplash.com/photo-1562515649-dd40e6212bdf?auto=format&fit=crop&q=80&w=800" alt="">
+            </div>
+            <div class="about-text">
+                <h2>Tentang LUXE DRIVE</h2>
+                <p class="tagline">Eksklusivitas, Performa, dan Kepercayaan.</p>
+                <p>Didirikan sejak satu dekade lalu, LUXE DRIVE berkomitmen menyediakan unit kendaraan mewah dengan kondisi prima dan rekam jejak yang transparan.</p>
+                
+                <div class="vismis">
+                    <div class="vm-box">
+                        <h4>Visi</h4>
+                        <p>Menjadi kiblat showroom mobil premium terpercaya dengan standar pelayanan terbaik di Indonesia.</p>
+                    </div>
+                    <div class="vm-box">
+                        <h4>Misi</h4>
+                        <p>Menghadirkan line-up kendaraan eksklusif terkurasi serta layanan purna jual yang solutif dan personal.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimoni" class="testi-section">
+        <div class="container">
+            <h2 class="section-title">Apa Kata Mereka?</h2>
+            <div class="testi-grid">
+                <div class="testi-card">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>"Pelayanan luar biasa cepat, mobil diantar langsung ke rumah dalam kondisi super bersih seperti baru keluar dari pabrik."</p>
+                    <div class="user-info">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150" alt="User 1">
+                        <h5>Ahmad Perkasa</h5>
+                    </div>
+                </div>
+                <div class="testi-card">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>"Proses pembelian kendaraan listrik di sini sangat transparan. Edukasi produk yang diberikan tim sales sangat mendalam."</p>
+                    <div class="user-info">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150" alt="User 2">
+                        <h5>Citra Wijaya</h5>
+                    </div>
+                </div>
+                <div class="testi-card">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>"Showroom paling premium di kota ini. Koleksi mobil langkanya selalu diperbarui. Sangat puas dengan transaksi di sini."</p>
+                    <div class="user-info">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=150" alt="User 3">
+                        <h5>Reza Fahlevi</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontak" class="contact-section">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Hubungi Kami</h2>
+                <p>Punya pertanyaan atau ingin melakukan janji temu inspeksi? Tim kami siap melayani Anda 24/7.</p>
+                <div class="info-links">
+                    <p><i class="fas fa-map-marker-alt"></i> Jl. Kemang Raya No. 12, Jakarta Selatan</p>
+                    <p><i class="fas fa-phone"></i> +62 812 3456 7890</p>
+                    <p><i class="fas fa-envelope"></i> info@luxedrive.com</p>
+                </div>
+            </div>
+            <div class="contact-form-wrapper">
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="nama">Nama Lengkap</label>
+                        <input type="text" id="nama" placeholder="Masukkan nama Anda">
+                        <span class="error-msg" id="error-nama"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Alamat Email</label>
+                        <input type="email" id="email" placeholder="Masukkan email aktif">
+                        <span class="error-msg" id="error-email"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="pesan">Pesan Anda</label>
+                        <textarea id="pesan" rows="4" placeholder="Tulis pesan atau mobil yang diminati..."></textarea>
+                        <span class="error-msg" id="error-pesan"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Kirim Pesan</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h3>LUXE DRIVE</h3>
+                <p>Destinasi utama perburuan mobil premium, eksotis, dan berkelas tinggi.</p>
+            </div>
+            <div class="footer-socials">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 LUXE DRIVE Showroom. Hak Cipta Dilindungi.</p>
+        </div>
+    </footer>
+
+    <button id="back-to-top"><i class="fas fa-arrow-up"></i></button>
+
+    <script src="data/cars.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
